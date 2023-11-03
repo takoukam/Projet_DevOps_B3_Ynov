@@ -82,7 +82,7 @@ POZOS will give you information to build the API container
 
 - Base image
 
-To build API image you must use "python:2.7-stretch"
+To build API image you must use "python:2.7-buster"
 
 - Maintainer
 
@@ -96,8 +96,8 @@ You need to copy the source code of the API in the container at the root "/" pat
 
 The API is using FLASK engine,  here is a list of the package you need to install
 ```
-apt-get update -y && apt-get install python-dev python3-dev libsasl2-dev python-dev libldap2-dev libssl-dev -y
-pip install flask flask_httpauth flask_simpleldap python-dotenv
+apt update -y && apt install python-dev python3-dev libsasl2-dev python-dev libldap2-dev libssl-dev -y
+pip install flask==1.1.2 flask_httpauth==4.1.0 flask_simpleldap python-dotenv==0.14.0
 ```
 - Persistent data (volume)
 
